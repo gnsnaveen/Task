@@ -1,0 +1,76 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+
+<body>
+<div class="container">
+
+<div class="container">
+		<div class="card">
+			<div class="card-header bg-primary text-white">
+				<h1>Welcome to User Register Page</h1>
+			</div>
+			<div class="card-body">
+				<form id="myForm" th:action="@{/user/save}" method="POST">
+					<!--new Row -->
+					
+					
+					<div class="row">
+						<div class="col-4">
+							<label for="appDate"> USER NAME</label>
+						</div>
+						<div class="col-4">
+							<input type="text" name="uname" class="form-control" />
+						</div>
+						<div class="col-4" id="uNameError">
+						</div>
+					</div>
+					<!--new Row -->
+					<div class="row">
+						<div class="col-4">
+							<label for="noOfSlots"> Email</label>
+						</div>
+						<div class="col-4">
+							<input type="text" name="email" class="form-control" />
+						</div>
+						<div class="col-4" id="emailError">
+						</div>
+					</div>
+					<!--new Row -->
+					<div class="row">
+						<div class="col-4">
+							<label for="details"> PASSWORD</label>
+						</div>
+						<div class="col-4">
+							<input type="password" name="pwd" class="form-control" />
+						</div>
+						<div class="col-4" id="detailsError">
+						</div>
+					</div>
+					<!--new Row -->
+					<div class="row">
+						<div class="col-4">
+							<label for="appFee"> ROLE</label>
+						</div>
+						<div class="col-4">
+							<textarea name="role" class="form-control"></textarea>
+						</div>
+						<div class="col-4" id="appFeeError">
+						</div>
+					</div>
+					<input type="submit" value="Register" class="btn btn-success" />
+				</form>
+			</div>
+			<div class="card-footer bg-info text-white">
+				<b>[[${message}]]</b>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
